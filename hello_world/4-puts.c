@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-char main(void)
+int main(void)
 
 /*
  * main - Entry point
@@ -8,7 +8,7 @@ char main(void)
  * Return: 0
  */
 {
-    puts('"Programming is like building a multilingual puzzle"');
+    puts("Programming is like building a multilingual puzzle");
 
 	return (0);
 }
