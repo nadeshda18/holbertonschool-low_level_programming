@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /*
  * main- Entry point
  * 'print the exact line'
