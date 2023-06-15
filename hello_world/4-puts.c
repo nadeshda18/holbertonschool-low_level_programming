@@ -5,10 +5,10 @@ int main(void)
 /*
  * main - Entry point
  * 'print exactly'
- * Return: 0
+ * Return: 0 (Success)
  */
 {
-    puts("Programming is like building a multilingual puzzle");
+    puts("\"Programming is like building a multilingual puzzle\n");
 
 	return (0);
 }
