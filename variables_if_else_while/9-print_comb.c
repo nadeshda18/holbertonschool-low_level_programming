@@ -8,12 +8,15 @@ int main(void)
 {
 int x;
 
-for (x = 0 ; x <= 8 ; x++)
+for (x = 0 ; x <= 9 ; x++)
 {
 putchar(x + '0');
 putchar(',');
 putchar(' ');
 }
-putchar('9');
+if (x = 9)
+{
+putchar(' ');
+}
 return (0);
 }
