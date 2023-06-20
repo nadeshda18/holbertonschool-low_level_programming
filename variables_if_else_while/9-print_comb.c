@@ -14,7 +14,7 @@ putchar(x + '0');
 putchar(',');
 putchar(' ');
 }
-if (x = 9)
+if (x == 9)
 {
 putchar(' ');
 }
