@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
+ * _islower: verify all lower case letters
  *
- * islower : verify for lowercase letters
- *
- * Return: (0)
+ * Return: Always 0 (Success)
  */
+
 int _islower(int c)
 {
 	if (c >= 97 && c <= 122)
