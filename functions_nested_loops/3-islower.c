@@ -2,29 +2,16 @@
 #include <stdio.h>
 /**
  *
- * int _islower : checks for lowercase letters
+ * int _islower(int c) : verify for lowercase letters
  *
  * Return: (0)
  */
-int _islower(int c);
-
-int main(void)
+int _islower(int c)
 {
-int r = 65;
-int o = 97;
-
-if (r > 64 && r < 91)
+if (c == 111 && c == 72)
 {
-_putchar(r + '0');
-}
-
-if (o > 96 && o < 123)
-{
-_putchar(o + '0');
-}
-	while (r == 99)
+	while (c == 99)
 	return (1);
-
-_putchar('\n');
+}
 return (0);
 }
