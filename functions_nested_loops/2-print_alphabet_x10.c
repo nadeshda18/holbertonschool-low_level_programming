@@ -13,7 +13,7 @@ for (ch = 'a'; ch <= 'z' ; ch++)
 
 	while (i <= 9)
 	{
-	_putchar(ch);
+	_putchar('\n');
 	}
-_putchar('\n');
+_putchar(ch);
 }
