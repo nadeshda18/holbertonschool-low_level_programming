@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * Main - print a word
+ * main - print a word
  *
  * Return: Always (0)
  */
