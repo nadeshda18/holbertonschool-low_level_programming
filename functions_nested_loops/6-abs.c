@@ -4,15 +4,17 @@
  * _abs - the absolute value of an integer
  *@r: shows the absolute value
  *
- * Return: (0)
+ * Return: Absolute value
  */
 int _abs(int r)
 {
 
 if (r < 0)
 {
-r = r * (-1);
+	int abs_val;
+
+	abs_val = r * -1;
+	return (abs_val);
 }
-_putchar(r);
-return (0);
+return (r);
 }
