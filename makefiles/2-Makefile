@@ -1,25 +1,9 @@
 #this is my third makefile
 
-all:
+all: $(OBJ)
 CC	=	gcc
 SRC	=	main.c	school.c
+OBJ	$(SRC:.c=.o)
 NAME	=	school
 
-school.o:	school.c	m.h
-	$(CC)	-c	$(SRC)
-
-main.o:	main.c	m.h
-	$(CC)	-c	$(SRC)
-
-school:	school.o	main.o
-	$(CC)	school.o	main.o	-o	$(NAME)
-
-	$(CC)	$(SRC)	-o	$(NAME)
-
-exec:	school
-
-clean:
-	rm	-f	main.o
-	rm	-f	school.o
-
-
+	$(CC)	$(OBJ)	-o	$(NAME)
