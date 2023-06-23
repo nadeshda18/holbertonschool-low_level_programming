@@ -3,8 +3,16 @@
 all:
 CC	=	gcc
 SRC	=	main.c	school.c
-OBJ	=	$(SRC:%.c=.o)
 NAME	=	school
+
+school.o:	school.c	m.h
+	gcc	-c	school.c
+
+main.o:	main.c	m.h
+	gcc	-c	main.c
+
+school:	school.o	main.o
+	gcc		school.o	main.o	-o	school
 
 	$(CC)	$(SRC)	-o	school
 
@@ -13,3 +21,5 @@ exec:	school
 clean:
 	rm	-f	main.o
 	rm	-f	school.o
+
+
