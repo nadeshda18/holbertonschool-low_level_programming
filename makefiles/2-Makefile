@@ -6,13 +6,13 @@ SRC	=	main.c	school.c
 NAME	=	school
 
 school.o:	school.c	m.h
-	$(CC)	-c	school.c
+	$(CC)	-c	$(SRC)
 
 main.o:	main.c	m.h
-	$(CC)	-c	main.c
+	$(CC)	-c	$(SRC)
 
 school:	school.o	main.o
-	$(CC)		school.o	main.o	-o	school
+	$(CC)	school.o	main.o	-o	school
 
 	$(CC)	$(SRC)	-o	school
 
