@@ -1,9 +1,10 @@
 #this is my second makefile
 
 CC	= gcc
-SRC	=		main.c	school.c
+SRC	=	school
 
 all:
-		$(CC) main.c	school.c	-o	school
+
+		$(CC) main.c	school.c	-o	$(SRC)
 
 exec:	school
