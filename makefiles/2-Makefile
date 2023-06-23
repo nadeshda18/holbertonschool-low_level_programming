@@ -12,9 +12,9 @@ main.o:	main.c	m.h
 	$(CC)	-c	$(SRC)
 
 school:	school.o	main.o
-	$(CC)	school.o	main.o	-o	school
+	$(CC)	school.o	main.o	-o	$(NAME)
 
-	$(CC)	$(SRC)	-o	school
+	$(CC)	$(SRC)	-o	$(NAME)
 
 exec:	school
 
