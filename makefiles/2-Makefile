@@ -3,10 +3,10 @@
 all:
 CC	=	gcc
 SRC	=	main.c	school.c
-OBJ	=	school.o
+OBJ	=	school.o	main.o
 NAME	=	school
 
-	$(CC)	$(SRC)	-o	$(NAME)
+	$(CC)	$(SRC)	-o	school
 
 exec:	school
 
