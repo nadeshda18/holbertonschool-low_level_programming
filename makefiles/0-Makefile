@@ -1,3 +1,5 @@
 # first makefile
-school: main.c
-		gcc -o school main.c
+
+all:
+
+exec: school
