@@ -2,7 +2,6 @@
 #include <stdio.h>
 /**
  * print_line - draw straight lines
- *
  * @n: finish with character
  *
  * Return: void
@@ -13,10 +12,11 @@ void print_line(int n)
 
 	if (n > 0)
 	{
-			for (i = 0; i < n; i++)
-				{
-					_putchar('_');
-				}
-	_putchar('\n');
+		for (i = 0; i < n; i++)
+		{
+		_putchar('_');
+		}
+
 	}
+	_putchar('\n');
 }
