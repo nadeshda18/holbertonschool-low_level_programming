@@ -4,7 +4,6 @@
  * print_rev - print a verse in reverse
  * @s: character name
  *
- * Return: (0)
  */
 void print_rev(char *s)
 {
@@ -13,14 +12,14 @@ void print_rev(char *s)
 
 	while (*s != '\0')
 	{
-	a++;
-	s++;
+		a++;
+		s++;
 	}
 	s--;
 	for (b = a; b > 0; b--)
 	{
-	_putchar(*s);
-	s--;
+		_putchar(*s);
+		s--;
 	}
 	_putchar('\n');
 }
