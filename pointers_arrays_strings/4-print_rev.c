@@ -4,6 +4,7 @@
  * print_rev - print a verse in reverse
  * @s: character name
  *
+ * Return: (0)
  */
 void print_rev(char *s)
 {
