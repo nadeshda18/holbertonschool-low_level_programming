@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * puts_half - print the second half of a string
- *
+ *@str: pointer
  */
 void puts_half(char *str)
 {
