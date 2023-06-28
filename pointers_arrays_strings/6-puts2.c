@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * puts2 - print every other character from a string, starting with the first letter
+ * puts2 - print every other character from a string
  * @str: pointer
  *
  * Return: (0)
