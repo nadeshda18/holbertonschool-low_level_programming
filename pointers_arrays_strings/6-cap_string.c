@@ -10,22 +10,23 @@
 char *cap_string(char *s)
 {
 	int i;
+	int n;
+	char c[13] = ' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\t', '\n';
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i == 0)
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
 		{
-			if((s[i] >= 'a' && s[i] <= 'z'))
-				s[i] = s[i] - 32;
-			continue;
+			s[i] -= 32;
 		}
-		if (s[i]==' ')
+		for (n = 0; n < 13; n++)
 		{
-			++i;
-			if (s[i] >= 'a' && s[i] <= 'z')
+			if (s[i] == c[n])
 			{
-				s[i] = s[i] - 32;
-				continue;
+				if (s[i +1] >= 'a' && s[i +1] <= 'z')
+				{
+					s[i] -= 32;
+				}
 			}
 		}
 	}
