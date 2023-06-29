@@ -1,17 +1,18 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * cap_string - capitalize all words
- * @s: pointer
+ * cap_string - cap. all words
+ * @s: point
  *
  * Return: s
  *
  */
 char *cap_string(char *s)
 {
-	int i;
-	int n;
-	char c[13] = {' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\t', '\n'};
+	int i, n;
+
+	char c[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?',
+	'"', '(', ')', '{', '}'};
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
