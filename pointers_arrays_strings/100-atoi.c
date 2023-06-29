@@ -5,11 +5,12 @@
  * @a: character to be mapped
  * Return: the integer version of the char
  */
+
 int mapint(char a)
 {
-    if (a >= 48 && a <= 57)
-        return ((int)a - 48);
-    return (0);
+	if (a >= 48 && a <= 57)
+	return ((int)a - 48);
+	return (0);
 }
 
 /**
@@ -17,9 +18,10 @@ int mapint(char a)
  * @i: integer i
  * Return: true if number, false if not
  */
+
 int isDigit(char i)
 {
-    return (i >= '0' && i <= '9');
+	return (i >= '0' && i <= '9');
 }
 
 /**
@@ -27,23 +29,24 @@ int isDigit(char i)
  * @s: string s
  * Return: returns parsed integer
  */
+
 int _atoi(char *s)
 {
-    unsigned int num = 0, sign = 1, started = 0;
+	unsigned int num = 0, sign = 1, started = 0;
 
-    while (*s)
-    {
-        /* if a number is already counting and a non-number is found, break */
-        if (started && !isDigit(*s))
-            break;
-        if (*s == '-')
-            sign *= -1;
-        if (isDigit(*s))
-        {
-            started = 1;
-            num =  num * 10 + mapint(*s);
-        }
-        s++;
-    }
-    return (sign * num);
+	while (*s)
+	{
+		/* if a number is already counting and a non-number is found, break */
+		if (started && !isDigit(*s))
+			break;
+			if (*s == '-')
+			sign *= -1;
+		if (isDigit(*s))
+		{
+			started = 1;
+			num =  num * 10 + mapint(*s);
+			}
+		s++;
+	}
+	return (sign * num);
 }
