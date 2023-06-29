@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- *mapint - maps a character to its integer form
- *@a: character to be mapped
- *Return: the integer version of the char
+ * mapint - maps a character to its integer form
+ * @a: character to be mapped
+ * Return: the integer version of the char
  */
-
 int mapint(char a)
 {
     if (a >= 48 && a <= 57)
         return ((int)a - 48);
     return (0);
 }
+
 /**
  * isDigit - returns true if i is a number
  * @i: integer i
@@ -23,7 +23,7 @@ int isDigit(char i)
 }
 
 /**
- * _atoi - converts a string to integer
+ * _atoi - converts a string to an integer
  * @s: string s
  * Return: returns parsed integer
  */
@@ -33,7 +33,7 @@ int _atoi(char *s)
 
     while (*s)
     {
-        /*if a number is already countign and a non number is found break*/
+        /* if a number is already counting and a non-number is found, break */
         if (started && !isDigit(*s))
             break;
         if (*s == '-')
