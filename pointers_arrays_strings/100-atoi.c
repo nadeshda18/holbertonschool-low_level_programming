@@ -1,46 +1,49 @@
 #include "main.h"
 
 /**
- * _atoi - converts a string to an integer
- * @s: string to be converted
- *
- * Return: the int converted from the string
+ *mapint - maps a character to its integer form
+ *@a: character to be mapped
+ *Return: the integer version of the char
+ */
+
+int mapint(char a)
+{
+    if (a >= 48 && a <= 57)
+        return ((int)a - 48);
+    return (0);
+}
+/**
+ * isDigit - returns true if i is a number
+ * @i: integer i
+ * Return: true if number, false if not
+ */
+int isDigit(char i)
+{
+    return (i >= '0' && i <= '9');
+}
+
+/**
+ * _atoi - converts a string to integer
+ * @s: string s
+ * Return: returns parsed integer
  */
 int _atoi(char *s)
 {
-    int i, d, n, len, f, digit;
+    unsigned int num = 0, sign = 1, started = 0;
 
-    i = 0;
-    d = 0;
-    n = 0;
-    len = 0;
-    f = 0;
-    digit = 0;
-
-    while (s[len] != '\0')
-        len++;
-
-    while (i < len && f == 0)
+    while (*s)
     {
-        if (s[i] == '-')
-            ++d;
-
-        if (s[i] >= '0' && s[i] <= '9')
+        /*if a number is already countign and a non number is found break*/
+        if (started && !isDigit(*s))
+            break;
+        if (*s == '-')
+            sign *= -1;
+        if (isDigit(*s))
         {
-            digit = s[i] - '0';
-            if (d % 2)
-                digit = -digit;
-            n = n * 10 + digit;
-            f = 1;
-            if (s[i + 1] < '0' || s[i + 1] > '9')
-                break;
-            f = 0;
+            started = 1;
+            num =  num * 10 + mapint(*s);
         }
-        i++;
+        s++;
     }
-
-    if (f == 0)
-        return (0);
-
-    return (n);
+    return (sign * num);
 }
