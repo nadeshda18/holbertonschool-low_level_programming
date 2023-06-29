@@ -34,10 +34,10 @@ int _atoi(char *s)
 {
 	unsigned int num = 0, sign = 1, started = 0;
 
-	while (*s)
+		while (*s)
 	{
 		/* if a number is already counting and a non-number is found, break */
-		if (started && !isDigit(*s))
+			if (started && !isDigit(*s))
 			break;
 			if (*s == '-')
 			sign *= -1;
