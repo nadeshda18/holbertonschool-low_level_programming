@@ -5,7 +5,7 @@
  * @haystack: to be searched
  * @needle: substring
  *
- * Return: needle or NULL
+ * Return: haustack or NULL
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -16,7 +16,8 @@ char *_strstr(char *haystack, char *needle)
 		for (j = 0; needle[j] != '\0'; j++)
 		{
 			if (haystack[i] == needle[j])
-				return (needle);
+				return (haystack);
+			i++;
 		}
 	}
 	return (NULL);
