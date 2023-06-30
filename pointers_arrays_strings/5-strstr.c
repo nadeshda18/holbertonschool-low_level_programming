@@ -5,21 +5,22 @@
  * @haystack: to be searched
  * @needle: substring
  *
- * Return: haustack or NULL
+ * Return: haystack or NULL
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int j = 0;
+	int i, j;
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-			if (needle[j] == haystack[i])
+		for (j = 0; needle[j] != '\0'; j++)
+		{
+			while (needle[j] == haystack[i])
 			{
-			i++;
-			j++;
+				i++;
+				return (haystack);
 			}
-			return (needle);
+		}
 	}
 	return (NULL);
 }
