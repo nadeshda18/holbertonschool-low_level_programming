@@ -7,10 +7,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i;
-	int j;
-	int princ = 0;
-	int sec = 0;
+	int i, j, princ, sec;
 
 	for (i = 0; i < size; i++)
 	{
@@ -18,14 +15,14 @@ void print_diagsums(int *a, int size)
 		{
 			if (i == j)
 			{
-				princ = a[i];
-				printf("%d\n", princ);
+				princ = a[i] + a[j];
 			}
+
 			if ((i + j) == (size - 1))
 			{
-				sec = a[i];
-				printf("%d\n", sec);
+				sec = a[i] + a[j];
 			}
 		}
 	}
+	printf("%d, %d\n", princ, sec);
 }
