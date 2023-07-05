@@ -10,13 +10,11 @@
 int sqrt_number(int a, int b)
 {
 	if (a == (b * b))
-			return (b);
-
+		return (b);
 	else if ((b * b) > a)
-			return (-1);
-
+		return (-1);
 	else
-			return (sqrt_number(a, b + 1));
+		return (sqrt_number(a, b + 1));
 }
 /**
  * _sqrt_recursion - natural square root of a number
