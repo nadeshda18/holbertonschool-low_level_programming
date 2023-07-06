@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
  * main - multiply two numbers
  * @argc: integer
  * @argv: character
