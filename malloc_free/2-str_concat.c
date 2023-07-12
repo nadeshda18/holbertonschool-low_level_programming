@@ -14,10 +14,10 @@ char *str_concat(char *s1, char *s2)
 	int i, j;
 	char *ptr = malloc(sizeof(char) * (strlen(s1) + (strlen(s2) + 1)));
 
-	if (!s1)
+	if (s1 == NULL)
 		return (NULL);
 
-	if (!s2)
+	if (s2 == NULL)
 		return (NULL);
 
 	if (ptr == NULL)
