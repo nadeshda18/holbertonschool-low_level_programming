@@ -5,6 +5,7 @@
  * init_dog - initialize a variable
  * @d: struct dog
  * @name: char
+ * @age: float
  * @owner: char
  */
 
