@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "dog.h"
 /**
  * new_dog - initialize a variable
@@ -17,9 +18,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new_dog == NULL)
 		return (NULL);
 
-	new_dog->name = name;
+	new_dog->name = malloc(strlen(name)+1);
+	if (new_dog->name == NULL)
+		return (NULL);
+
+	new_dog->owner = malloc(strlen(owner)+1);
+	if (new_dog->owner == NULL)
+		return (NULL);
+
 	new_dog->age = age;
-	new_dog->owner = owner;
 	return (new_dog);
 }
 
