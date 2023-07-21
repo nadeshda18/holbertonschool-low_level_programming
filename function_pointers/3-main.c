@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int (*op_func)(int, int);
+	int n2;
 
 	if (argc != 4)
 	{
@@ -25,7 +26,8 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((atoi(argv[2]) == atoi("/") || atoi(argv[2]) == atoi("%")) && atoi(argv[3]) == 0)
+	n2 = atoi(argv[3]);
+	if ((atoi(argv[2]) == atoi("/") || atoi(argv[2]) == atoi("%")) && n2 == 0)
 		{
 		printf("Error\n");
 		exit(100);
