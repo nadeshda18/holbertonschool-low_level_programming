@@ -77,5 +77,12 @@ void print_f(char *separator, va_list args)
  */
 void print_str(char *separator, va_list args)
 {
-	printf("%s%s", separator, va_arg(args, char *));
+	char *arg = va_arg(args, char *);
+
+	if (arg == NULL)
+	{
+		printf("%s%s", separator, "(nil)");
+		return;
+	}
+	printf("%s%s", separator, arg);
 }
