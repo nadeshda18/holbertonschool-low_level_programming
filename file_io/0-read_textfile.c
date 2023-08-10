@@ -8,7 +8,7 @@
  * @filename: pointer
  * @letters: number of letters
  *
- * Return: 0 if fails or filename is NULL, number of characters printed if success
+ * Return: 0 if fails or filename is NULL
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -28,5 +28,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	free(buf);
 	close(open_file);
-	return(write_file);
+	return (write_file);
 }
